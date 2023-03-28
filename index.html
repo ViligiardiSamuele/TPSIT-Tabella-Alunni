@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="http://villo.ddns.net/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Elenco Alunni</title>
+  </head>
+  <body>
+    <div class="container">
+        <br>
+        <div class="mb-3">
+            <label for="alunno" class="form-label">Inserisci dati alunno</label>
+            <input type="text" class="form-control" id="alunno" placeholder="Cognome nome">
+        </div>
+        <select class="form-select" aria-label="Classe" id="classe">
+            <option selected value="0">Classe</option>
+            <option value="4AIA">4AIA</option>
+            <option value="4BIA">4BIA</option>
+            <option value="4CIA">4CIA</option>
+            <option value="4DIA">4DIA</option>
+        </select>
+ 
+        <br>
+        <div id="divButtons">
+          <button type="button" class="btn btn-primary" onclick="aggiungi()">Aggiungi</button>
+        </div>
+        <button type="button" class="btn btn-primary mt-1" onclick="salva()">Salva</button>
+        <hr>
+        <h2>Elenco Alunni</h2>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Nominativo</th>
+                <th scope="col">Classe</th>
+                <th scope="col">Operazioni</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
